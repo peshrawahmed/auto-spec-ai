@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Auto-Spec-AI",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/target/debug/auto-spec-ai",
+      "args": [
+        "--route",
+        "/api/v2/user/signup",
+        "--method",
+        "POST",
+        "--controller",
+        "/home/allesgo/dev/ic-v2-user/app/common/controllers/recaptcha-challenge.controller.js,/home/allesgo/dev/ic-v2-user/app/auth/controllers/signup.controller.js,/home/allesgo/dev/ic-v2-user/app/auth/controllers/sign-membership-contract.controller.js"
+      ],
+      "cwd": "${workspaceFolder}",
+      "stopOnEntry": false,
+      "sourceLanguages": ["rust"],
+      "preLaunchTask": "cargo build"
+    }
+  ]
+}
